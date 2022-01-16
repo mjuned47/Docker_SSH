@@ -1,0 +1,17 @@
+name: Ubuntu SSH
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ssh:
+    runs-on: ubuntu-latest
+     env:
+      GitHubMail: ${{ secrets.GitHubMail }}
+      GitHubName: ${{ secrets.GitHubName }}
+
+steps:
+      - uses: actions/checkout@main
+
+- name: Running Docker Image
+        run: |
